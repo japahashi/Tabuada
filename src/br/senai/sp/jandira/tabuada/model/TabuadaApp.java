@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TabuadaApp {
 
-    public int multiolicando;
+    public int multiplicando;
     public int multiplicadorInicial;
     public int multiplicadorFinal;
     public String[] tabuada;
@@ -13,7 +13,7 @@ public class TabuadaApp {
         Scanner leitor = new Scanner(System.in);
 
         System.out.print("Qual é o valor do multiplicando: ");
-        multiolicando = leitor.nextInt();
+        multiplicando = leitor.nextInt();
 
         System.out.print("Qual é o valor do multiplicador inicial: ");
         multiplicadorInicial = leitor.nextInt();
@@ -23,7 +23,7 @@ public class TabuadaApp {
 
         calcularTabuada();
     }
-    public void calcularTabuada(){
+    public String[] calcularTabuada(){
         int apoio = 0;
         if(multiplicadorFinal < multiplicadorInicial){
             apoio = multiplicadorFinal;
@@ -35,12 +35,13 @@ public class TabuadaApp {
 
         int i = 0;
         while (i < tamanho){
-            int produto = multiolicando * multiplicadorInicial;
-            tabuada[i] = multiolicando + " x " + multiplicadorInicial + " = " + produto;
+            int produto = multiplicando * multiplicadorInicial;
+            tabuada[i] = multiplicando + " x " + multiplicadorInicial + " = " + produto;
             multiplicadorInicial = multiplicadorInicial + 1;
             i = i + 1;
         }
-        exibirTabuada();
+        return tabuada;
+        //exibirTabuada();
     }
     public void exibirTabuada(){
         System.out.println("Resultado da sua tabuada:");

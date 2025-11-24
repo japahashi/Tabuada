@@ -1,7 +1,7 @@
 package br.senai.sp.jandira.tabuada;
 
 import br.senai.sp.jandira.tabuada.gui.TelaTabuada;
-import br.senai.sp.jandira.tabuada.model.TabuadaApp;
+//import br.senai.sp.jandira.tabuada.model.TabuadaApp;
 import javafx.application.Application;
 
 public class TabuadaMain {
